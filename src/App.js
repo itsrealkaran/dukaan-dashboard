@@ -8,16 +8,17 @@ const appStyle = {
   display: "flex",
   flexDirection: "row", // Align components in a row
   height: "100vh",
+  background: "#FAFAFA",
 };
 
 const navbarStyle = {
   display: "flex",
-  width: "16vw", // Set the navbar width to 20%
+  flex: "1 1 16%",
 };
 
 const contentContainerStyle = {
   display: "flex",
-  width: "84vw",
+  flex: "1 1 84%",
   flexDirection: "column", // Display header and main in a column
 };
 

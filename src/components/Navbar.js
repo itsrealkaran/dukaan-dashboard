@@ -1,6 +1,6 @@
 // Navbar.js
 import React from "react";
-import { MyProjectsIcon, DropdownIcon, CreditIcon } from "./Icons"; // Import your Icons component
+import { MyProjectsIcon, DownArrowIcon, CreditIcon } from "./Icons"; // Import your Icons component
 
 const navbarStyle = {
   backgroundColor: "#1E2640",
@@ -10,20 +10,22 @@ const navbarStyle = {
   flexDirection: "column",
   flex: 1,
   gap: "1rem",
-  height: "95vh",
+  justifyContent: "space-between",
+  //height: "100vh",
 };
 
 const navTopStyle = {
   display: "flex",
   flexDirection: "column",
   gap: "1.5rem",
-  height: "100vh",
+  overflowY: "auto",
 };
 
 const logoContainerStyle = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
+  padding: "0rem 0.5rem",
   gap: "0.75rem",
   justifyContent: "space-between",
 };
@@ -31,6 +33,7 @@ const logoContainerStyle = {
 const logoStyle = {
   width: "2.43rem",
   height: "2.43rem",
+  borderRadius: "0.25rem",
 };
 
 const storeContainerStyle = {
@@ -75,7 +78,6 @@ const navigationItemStyle = {
   alignItems: "center",
   lineHeight: "1.25rem",
   gap: "0.75rem",
-  background: "#ffffff1a",
   borderRadius: "0.25rem",
 };
 
@@ -119,7 +121,7 @@ const Navbar = () => {
       <div style={navTopStyle}>
         <div style={logoContainerStyle}>
           <img
-            src="https://via.placeholder.com/50x50"
+            src="https://dukaan-dashboard-wadad-parker.netlify.app/assets/logo-PjJw5uIF.png"
             alt="Store Logo"
             style={logoStyle}
           />
@@ -127,7 +129,7 @@ const Navbar = () => {
             <div style={storeNameStyle}>Nishyan</div>
             <div style={visitStoreStyle}>Visit Store</div>
           </div>
-          <DropdownIcon />
+          <DownArrowIcon />
         </div>
         {/* Navigation List */}
         <div style={navigationListStyle}>
@@ -167,7 +169,7 @@ const Navbar = () => {
             </div>
             Analytics
           </div>
-          <div style={navigationItemStyle}>
+          <div style={{ ...navigationItemStyle, background: "#ffffff1a" }}>
             <div style={iconStyle}>
               <MyProjectsIcon />
             </div>
