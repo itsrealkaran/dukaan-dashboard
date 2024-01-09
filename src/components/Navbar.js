@@ -78,6 +78,7 @@ const navigationItemStyle = {
   alignItems: "center",
   lineHeight: "1.25rem",
   gap: "0.75rem",
+  opacity: "0.8",
   borderRadius: "0.25rem",
 };
 

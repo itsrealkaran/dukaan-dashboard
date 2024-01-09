@@ -29,6 +29,16 @@ const paymentInfoStyle = {
   lineHeight: "1.375rem",
 };
 
+const paymentInfoMobileStyle = {
+  display: "flex",
+  flexDirection: "column",
+  flex: 1,
+  fontSize: "0.9375rem",
+  fontStyle: "normal",
+  fontWeight: "400",
+  lineHeight: "1.375rem",
+};
+
 const paymentTextsStyle = {
   display: "flex",
   alignItems: "center",
@@ -69,18 +79,17 @@ const circularButtonContainerStyle = {
 };
 
 const circularButtonStyle = {
-  backgroundColor: "#2ecc71",
   borderRadius: "50%",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
 };
 
-const Header = () => {
+const Header = ({ smallScreen }) => {
   return (
     <header style={headerStyle}>
       {/* First Div */}
-      <div style={paymentInfoStyle}>
+      <div style={smallScreen ? paymentInfoStyle : paymentInfoMobileStyle}>
         <div>Payments</div>
         <div style={paymentTextsStyle}>
           <QuestionMarkIcon />
